@@ -9,24 +9,23 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-    int count;  /* Variable to store the count of elements */
+	int count;  /* Variable to store the count of elements */
 
-    count = 0;  /* Initialize count to zero */
+	count = 0;  /* Initialize count to zero */
+	/* Check if the list is empty */
 
-    /* Check if the list is empty */
-    if (h == NULL)
-        return (count);
+	if (h == NULL)
+		return (count);
 
-    /* Move to the beginning of the list */
-    while (h->prev != NULL)
-        h = h->prev;
+	/* Move to the beginning of the list */
+	while (h->prev != NULL)
+		h = h->prev;
 
-    /* Traverse the list and count each element */
-    while (h != NULL)
-    {
-        count++;
-        h = h->next;
-    }
-
-    return (count);  /* Return the count of elements in the list */
+	/* Traverse the list and count each element */
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
+	return (count);  /* Return the count of elements in the list */
 }
