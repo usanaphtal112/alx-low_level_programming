@@ -6,39 +6,33 @@
  * @head: A pointer to a pointer to the head of the doubly linked list.
  * @n: The integer value to be stored in the new node.
  *
- * Return: A pointer to the newly added node, or NULL if memory allocation fails.
+ * Return: A pointer to the newly added node, or NULL if memory allocation
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-    dlistint_t *new;  /* Pointer to the newly created node */
-    dlistint_t *h;    /* Temporary pointer to traverse the list */
+	dlistint_t *new;
+	dlistint_t *h;
 
-    /* Allocate memory for the new node */
-    new = malloc(sizeof(dlistint_t));
-    if (new == NULL)
-        return (NULL);
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
 
-    /* Initialize the new node with the provided data */
-    new->n = n;
-    new->prev = NULL;
+	new->n = n;
+	new->prev = NULL;
+	h = *head;
 
-    /* Assign the current head to a temporary pointer */
-    h = *head;
+	if (h != NULL)
+	{
+		while (h->prev != NULL)
+			h = h->prev;
+	}
 
-    /* If the list is not empty, move to the beginning of the list */
-    if (h != NULL)
-    {
-        while (h->prev != NULL)
-            h = h->prev;
-    }
+	new->next = h;
 
-    /* Connect the new node to the current head and update the head */
-    new->next = h;
+	if (h != NULL)
+		h->prev = new;
 
-    if (h != NULL)
-        h->prev = new;
+	*head = new;
 
-    *head = new;
-
-    return (new);  /* Return a pointer to the newly added node */
+	return (new);
 }

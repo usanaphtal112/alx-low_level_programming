@@ -9,23 +9,21 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-    int sum;  /* Variable to store the sum of elements */
+	int sum;
 
-    sum = 0;  /* Initialize sum to zero */
+	sum = 0;
 
-    /* If the list is not empty, move to the beginning of the list */
-    if (head != NULL)
-    {
-        while (head->prev != NULL)
-            head = head->prev;
+	if (head != NULL)
+	{
+		while (head->prev != NULL)
+			head = head->prev;
 
-        /* Traverse the list and calculate the sum of elements */
-        while (head != NULL)
-        {
-            sum += head->n;
-            head = head->next;
-        }
-    }
+		while (head != NULL)
+		{
+			sum += head->n;
+			head = head->next;
+		}
+	}
 
-    return (sum);  /* Return the sum of elements in the list */
+	return (sum);
 }
