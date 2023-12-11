@@ -24,11 +24,13 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
+```
+
 ## Task 1: Without libraries what have we? We have no past and no future
 
 Create a script that creates a dynamic library called `liball.so` from all the .c files that are in the current directory.
 
-```bash
+
 #!/bin/bash
 
 gcc -Wall -Werror -Wextra -pedantic -shared -fPIC -o liball.so *.c
@@ -36,17 +38,18 @@ gcc -Wall -Werror -Wextra -pedantic -shared -fPIC -o liball.so *.c
 #### Task 1: Create Dynamic Library from .c Files
 Create a script that creates a dynamic library called `liball.so` from all the .c files in the current directory.
 
+
 #### Task 2: Call C Functions from Python
 Create a dynamic library containing C functions that can be called from Python.
 
-```markdown
 - Let's call C functions from Python
   - Create a dynamic library that contains C functions which can be called from Python. See example for more detail.
+
 
 #### Task 3: Code Injection for Giga Millions
 Create a shell script for code injection to win the Giga Millions.
 
-```markdown
+```
 - Code injection: Win the Giga Millions!
   - I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 75 + 9.
   - Create a shell script (`101-make_me_win.sh`) to be run on the server with the Giga Millions program.
