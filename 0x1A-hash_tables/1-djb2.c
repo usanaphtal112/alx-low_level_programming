@@ -1,16 +1,17 @@
 #include "hash_tables.h"
+
 /**
  * hash_djb2 - DJB2 hash algorithm for strings.
  *
- * This function calculates a hash value for the given
- * string using the DJB2 hash algorithm.
- * The algorithm iterates through each character in the string, updating
- * the hash value based on the current character and the previous hash value.
+ * Description:
+ *     This function calculates a hash value for the given
+ *     string using the DJB2 hash algorithm.
+ *     The algorithm iterates through each character in the string, updating
+ *     the hash value based on the current character and the previous.
  *
- * @param str   A pointer to the null-terminated string
- * for which the hash is calculated.
+ * @str: A pointer to the null-terminated string for which the hash.
  *
- * @return      The calculated hash value for the input string.
+ * Return: The calculated hash value for the input string.
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
