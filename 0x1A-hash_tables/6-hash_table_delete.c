@@ -3,12 +3,12 @@
 /**
  * hash_table_delete - Deletes a hash table and its contents.
  *
- * This function deallocates the memory used by the given hash table,
+ * Description: This function deallocates the memory used by the given hash
  * all key-value pairs stored in it. It frees the memory occupied
- * in the hash table and the array itself. After calling this function, the
- * hash table should not be accessed.
+ * in the hash table and the array itself. After calling this function,
+ * the hash table should not be accessed.
  *
- * @param ht    A pointer to the hash table to be deleted.
+ * @ht: A pointer to the hash table to be deleted.
  */
 void hash_table_delete(hash_table_t *ht)
 {
