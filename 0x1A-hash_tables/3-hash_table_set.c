@@ -3,16 +3,16 @@
 /**
  * hash_table_set - Adds or updates a key-value pair in a hash table.
  *
- * This function sets a key-value pair in the given hash table.
- * If the key already exists in the hash table, 
+ * Description: This function sets a key-value pair in the given hash table.
+ * If the key already exists in the hash table,
  * the corresponding value is updated.
  * If the key is not present, a new entry is created for the key-value pair.
  *
- * @param ht    A pointer to the hash table where the key-value
- * @param key   The key to be added or updated in the hash table.
- * @param value The value associated with the key to be set.
+ * @ht: A pointer to the hash table where the key-value pair should be added.
+ * @key: The key to be added or updated in the hash table.
+ * @value: The value associated with the key to be set.
  *
- * @return      Returns 1 on success, 0 on failure
+ * Return: Returns 1 on success, 0 on failure.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
