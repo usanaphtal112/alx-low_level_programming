@@ -1,18 +1,25 @@
+/*
+ * File: 2-key_index.c
+ * Author: Naphtal USABYUWERA
+ * Desc: Implementation of the key_index
+ * function using the DJB2 hash algorithm.
+ */
+
 #include "hash_tables.h"
 
 /**
- * Calculates the index for a given key using the DJB2 hash function.
+ * key_index - Calculates the index for a given key using the DJB2 hash
  *
- * This function takes a key (represented as an array of unsigned characters)
- *  and a size, and computes the index using the DJB2 hash algorithm.
- * The resulting index is the remainder
- * of the hash value divided by the specified size.
+ * Description: This function takes a key
+ * and a size, and computes the index using the DJB2 hash algorithm.
+ * The resulting index is the remainder of the hash value divided
  *
- * @param key   The key for which the index is to be calculated.
- * @param size  The size of the array or structure where the key
+ * @key: The key for which the index is to be calculated.
+ * @size: The size of the array or structure where the key will be stored.
  *
- * @return      The calculated index for the given key within
+ * Return: The calculated index for the given key within the specified size.
  */
+
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	return (hash_djb2(key) % size);
