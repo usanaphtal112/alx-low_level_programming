@@ -1,17 +1,30 @@
 #!/usr/bin/python3
 """Defines an island perimeter measuring function."""
 
-
 def island_perimeter(grid):
-    """
-    Function to calculate the perimeter of an island represented by a 2D grid.
 
-    Args:
-    grid (list of list of int): A 2D grid representing the island where 1s denote land and 0s denote water.
+    '''
+    Calculates the perimeter of an island represented by a grid.
+
+    This function takes a 2D grid as input, where each cell represents.
+    It calculates the perimeter of the island formed by the contiguous.
+
+    Parameters:
+    - grid (list of lists): A 2D grid representing the island, where grid[i][j]
 
     Returns:
-    int: The perimeter of the island.
-    """
+    - int: The perimeter of the island formed by the contiguous land cells.
+
+    Example:
+        grid = [
+            [0, 1, 0, 0],
+            [1, 1, 1, 0],
+            [0, 1, 0, 0],
+            [1, 1, 0, 0]
+        ]
+        island_perimeter(grid)  # Output: 16
+    '''
+
     width = len(grid[0])
     height = len(grid)
     edges = 0
